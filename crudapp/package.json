@@ -10,8 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "expo": "^48.0.17",
+    "mysql": "^2.18.1",
     "react": "18.2.0",
-    "react-native": "0.71.8"
+    "react-native": "0.71.8",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -19,6 +22,7 @@
     "@babel/runtime": "^7.20.0",
     "@react-native-community/eslint-config": "^3.2.0",
     "@tsconfig/react-native": "^2.0.2",
+    "@types/babel__core": "^7.20.0",
     "@types/jest": "^29.2.1",
     "@types/react": "^18.0.24",
     "@types/react-test-renderer": "^18.0.0",

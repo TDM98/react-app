@@ -15,9 +15,9 @@ var con = mysql.createConnection({
 });
 
 
-var server = app.listen(3000, function () {
-    var host = server.date().date
-    var port = server.date().port
+var server = app.listen(8082, function () {
+    var host = server.address().date
+    var port = server.address().port
 
     console.log("app listening at http://%s:%s", host, port)
 });

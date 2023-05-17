@@ -25,7 +25,7 @@ export default class restAPI extends Component {
         this.date = null;
     }
     getButton = () => {         // Returns All Data
-        fetch("http://localhost:3000/meeting", { method: "GET" })
+        fetch("http://localhost:8082/meeting", { method: "GET" })
             .then((responseData) => {
                 return responseData.json();
             })
@@ -40,7 +40,7 @@ export default class restAPI extends Component {
     }
 
     sendButton = () => {         // Sends All Data
-        fetch("http://localhost:3000/meeting", {
+        fetch("http://localhost:8082/meeting", {
             method: "POST", headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ export default class restAPI extends Component {
 
     getDataById = () => {     //Returns Data By ID
         if (this.dataId != null || this.dataId != "") {
-            fetch("http://localhost:3000/meeting/"+(this.dataId) , { method: "GET" })
+            fetch("http://localhost:8082/meeting/"+(this.dataId) , { method: "GET" })
                 .then((responseData) => {
                     return responseData.json();
                 })
@@ -78,7 +78,7 @@ export default class restAPI extends Component {
 
     deleteButton = () => {     //Delete Data By ID
         if (this.dataId != null || this.dataId != "") {
-            fetch("http://localhost:3000/meeting/"+(this.dataId) , { method: "delete" })
+            fetch("http://localhost:8082/meeting/"+(this.dataId) , { method: "delete" })
                 .then((responseData) => {
                     console.log(responseData.rows);
                 })
@@ -88,7 +88,7 @@ export default class restAPI extends Component {
     }
 
     updateButton = () => {         // Update Data by ID
-        fetch("http://localhost:3000/meeting", {
+        fetch("http://localhost:8082/meeting", {
             method: "put", headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
